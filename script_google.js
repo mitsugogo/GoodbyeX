@@ -2,8 +2,9 @@ const TWITTER_FAVICON = "data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAA
 
 document.addEventListener('DOMContentLoaded', () => {
     // favicon
-    waitForSelector("a[href*='twitter.com'] img.XNo5Ab").then(changeFavion);
-    waitForSelector("a[href^='https://x.com'] img.XNo5Ab").then(changeFavion);
+    waitForSelector("a[href*='twitter.com'] img.XNo5Ab, a[href*='twitter.com'] img.no69gc").then(changeFavion);
+    waitForSelector("a[href^='https://x.com'] img.XNo5Ab, a[href^='https://x.com'] img.no69gc").then(changeFavion);
+    waitForSelector("a[href^='https://t.co/'] img.XNo5Ab, a[href^='https://t.co/'] img.no69gc").then(changeFavion);
 });
 
 function changeFavion(imgs) {
