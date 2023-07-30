@@ -13,6 +13,7 @@
                 "https://x.com/*"
             ],
             "js": [
+                "lib.js",
                 "script.js"
             ],
             "css": [],
@@ -23,6 +24,7 @@
                 "https://tweetdeck.twitter.com/*"
             ],
             "js": [
+                "lib.js",
                 "script_tweetdeck.js"
             ],
             "css": [],
@@ -34,6 +36,7 @@
                 "https://www.google.com/*"
             ],
             "js": [
+                "lib.js",
                 "script_google.js"
             ],
             "css": [],
