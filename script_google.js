@@ -6,25 +6,32 @@ document.addEventListener('DOMContentLoaded', () => {
     waitForSelector("a[href^='https://x.com'] img.XNo5Ab").then(changeFavion);
 });
 
-function changeFavion(img) {
-    if (!img) return;
-    img.src = TWITTER_FAVICON;
+function changeFavion(imgs) {
+    if (!imgs) return;
+    imgs.forEach(element => {
+        element.src = TWITTER_FAVICON;
+    });
 }
 
 function waitForSelector(selector) {
     return new Promise((resolve) => {
-        if (document.querySelector(selector)) return resolve(document.querySelector(selector));
+        const elements = document.querySelectorAll(selector);
 
-        const observer = new MutationObserver(() => {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
+        if (elements.length > 0) {
+            resolve(elements);
+        } else {
+            const observer = new MutationObserver(() => {
+                const updatedElements = document.querySelectorAll(selector);
+                if (updatedElements.length > 0) {
+                    resolve(updatedElements);
+                    observer.disconnect();
+                }
+            });
 
-        observer.observe(document, {
-            childList: true,
-            subtree: true
-        });
+            observer.observe(document, {
+                childList: true,
+                subtree: true
+            });
+        }
     });
 }
