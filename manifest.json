@@ -1,6 +1,6 @@
 {
-    "name": "GoodbyeX - customized by mitsugogo (base v1.0.2)",
-    "version": "1.0.2",
+    "name": "GoodbyeX - customized by mitsugogo (base v1.0.6)",
+    "version": "1.0.6",
     "description": "A simple extension that removes the new \"X\" branding from Twitter.",
     "manifest_version": 3,
     "permissions": [
