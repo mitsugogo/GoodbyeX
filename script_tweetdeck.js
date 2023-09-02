@@ -16,9 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // TweetWindow
+    waitForSelector('#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-5swwoo.r-13qz1uu.r-417010 > div > div.css-1dbjc4n.r-aqfbo4.r-14lw9ot.r-lyc4rv.r-14skgim.r-13l2t4g.r-1wtj0ep.r-1m6ou43.r-bnwqim.r-o96wvk > div.css-1dbjc4n.r-1awozwy.r-lgpkq.r-utggzx.r-5t7p9m.r-13qz1uu > div.css-1dbjc4n.r-sdzlij.r-1phboty.r-rs99b7.r-145lgeb.r-o69zyx.r-icoktb.r-1ny4l3l.r-d9fdf6.r-o7ynqc.r-6416eg.r-lrvibr.r-13qz1uu > div > span > span').then(elem => {
+        if (!elem) return;
+        elem.innerHTML = 'ツイート';
+    });
     waitForSelector('#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-5swwoo.r-13qz1uu.r-417010 > div > div:nth-child(2) > div > div > div.css-1dbjc4n.r-tmtnm0.r-136ojw6 > div > div > div > div.css-1dbjc4n.r-obd0qt.r-1pz39u2.r-1777fci.r-1bn9qdh.r-1v6e3re > div > div > span > span').then(elem => {
         if (!elem) return;
-        elem.innerHTML = 'ツイートする';
+        elem.innerHTML = 'ツイート';
     });
 
     // Title
