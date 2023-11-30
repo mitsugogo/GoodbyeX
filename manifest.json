@@ -1,6 +1,6 @@
 {
-    "name": "GoodbyeX - customized by mitsugogo (base v1.0.6)",
-    "version": "1.0.6",
+    "name": "GoodbyeX - customized by mitsugogo (based v1.0.8)",
+    "version": "1.0.8",
     "description": "A simple extension that removes the new \"X\" branding from Twitter.",
     "manifest_version": 3,
     "permissions": [
@@ -21,7 +21,8 @@
         },
         {
             "matches": [
-                "https://tweetdeck.twitter.com/*"
+                "https://tweetdeck.twitter.com/*",
+                "https://pro.twitter.com/*"
             ],
             "js": [
                 "lib.js",
